@@ -4,9 +4,9 @@ import {ShoppingBag,ArrowRight,ShieldCheck,Zap,Sparkles,Menu,X,ChevronDown,Check
 import "./styles.css";
 
 const products=[
- {id:1,title:"Pack Premium",tag:"MAIS VENDIDO",desc:"Kit completo para acelerar seu projeto digital.",price:29.90,old:59.90,icon:"✦"},
- {id:2,title:"Método Pro",tag:"NOVO",desc:"Material estratégico para quem quer evoluir mais rápido.",price:49.90,old:89.90,icon:"⚡"},
- {id:3,title:"Kit Elite",tag:"EXCLUSIVO",desc:"Coleção premium com recursos extras e bônus.",price:79.90,old:129.90,icon:"♛"}
+ {id:1,title:"Pack Premium",tag:"MAIS VENDIDO",desc:"Kit completo para acelerar seu projeto digital.",price:29.90,old:59.90,icon:"✦",image:"https://images.unsplash.com/photo-1712555000742-84faee058b5e?auto=format&fit=crop&w=1200&q=85"},
+ {id:2,title:"Método Pro",tag:"NOVO",desc:"Material estratégico para quem quer evoluir mais rápido.",price:49.90,old:89.90,icon:"⚡",image:"https://images.unsplash.com/photo-1701715098298-31f8e0a1c2b1?auto=format&fit=crop&w=1200&q=85"},
+ {id:3,title:"Kit Elite",tag:"EXCLUSIVO",desc:"Coleção premium com recursos extras e bônus.",price:79.90,old:129.90,icon:"♛",image:"https://images.unsplash.com/photo-1721332153282-3be1d7e5c6f5?auto=format&fit=crop&w=1200&q=85"}
 ];
 const money=n=>n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
 
@@ -56,7 +56,7 @@ function App(){
    <section id="produtos" className="products">
     <div className="section-title reveal"><div><span className="eyebrow">ESCOLHA O SEU</span><h2>Produtos em destaque.</h2></div><p>Comece agora com uma coleção criada para quem quer sair do básico.</p></div>
     <div className="product-grid">{products.map(p=><article className="product reveal show" key={p.id}>
-      <div className="cover"><span className="product-tag">{p.tag}</span><div className="cover-icon">{p.icon}</div><span className="cover-label">LOJA DIGITAL / {String(p.id).padStart(2,"0")}</span></div>
+      <div className="cover" style={{backgroundImage:`linear-gradient(180deg,rgba(10,7,12,.12),rgba(10,7,12,.88)),url('${p.image}')`}}><span className="product-tag">{p.tag}</span><div className="cover-icon">{p.icon}</div><span className="cover-label">LOJA DIGITAL / {String(p.id).padStart(2,"0")}</span></div>
       <div className="product-info"><h3>{p.title}</h3><p>{p.desc}</p><div className="rating">★★★★★ <span>avaliação dos clientes</span></div><div className="buy-row"><div><del>{money(p.old)}</del><strong>{money(p.price)}</strong></div><button className="btn small primary" onClick={()=>add(p)}>Comprar <ArrowRight size={15}/></button></div></div>
     </article>)}</div>
    </section>
