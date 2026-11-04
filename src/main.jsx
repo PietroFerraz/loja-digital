@@ -29,21 +29,17 @@ function App(){
   <main>
    <section className="hero">
     <div className="hero-copy reveal">
-      <div className="eyebrow"><span className="pulse"/> ACESSO IMEDIATO • 100% DIGITAL</div>
-      <h1>Transforme seu <span>potencial</span> em resultado.</h1>
-      <p>Produtos digitais premium para quem quer aprender, criar e evoluir sem perder tempo.</p>
-      <div className="hero-buttons"><a href="#produtos" className="btn primary magnetic">Quero começar <ArrowRight size={18}/></a><a href="#beneficios" className="btn secondary">Conhecer a loja</a></div>
-      <div className="proof"><div className="avatars"><i>✓</i><i>★</i><i>+</i></div><div><strong>Compra simples e segura</strong><span>Entrega digital após a confirmação</span></div></div>
+      <div className="hero-kicker"><span>01</span> LOJA DIGITAL — EDIÇÃO 2026</div>
+      <h1>IDEIAS QUE<br/><em>VIRAM</em><br/>PRODUTOS.</h1>
+      <p>Uma seleção de produtos digitais para quem prefere aprender fazendo, criar melhor e avançar sem complicação.</p>
+      <div className="hero-buttons"><a href="#produtos" className="btn primary">EXPLORAR PRODUTOS <ArrowRight size={17}/></a><a href="#sobre" className="text-link">SOBRE A LOJA</a></div>
+      <div className="hero-meta"><span>CURADORIA DIGITAL</span><span>ENTREGA ONLINE</span><span>SUPORTE</span></div>
     </div>
     <div className="hero-visual reveal">
-      <div className="glow"/>
-      <div className="float-card one"><Zap size={15}/><span>ACESSO RÁPIDO</span></div>
-      <div className="float-card two"><Sparkles size={15}/><span>QUALIDADE PREMIUM</span></div>
-      <div className="visual-card">
-        <div className="visual-top"><span>LOJA DIGITAL</span><span>2026</span></div>
-        <div className="visual-center"><div className="ring"><div>LD</div></div><small>COLEÇÃO</small><strong>PREMIUM</strong><em>Eleve o seu nível.</em></div>
-        <div className="visual-bottom"><span>STARTING AT</span><strong>R$ 29,90</strong></div>
-      </div>
+      <div className="hero-image-main"><img src={products[0].image} alt="Produto digital em destaque"/></div>
+      <div className="hero-image-small"><img src={products[1].image} alt="Produto digital"/></div>
+      <div className="hero-label">NEW<br/><strong>DROP</strong></div>
+      <div className="hero-year">20<br/>26</div>
     </div>
    </section>
 
