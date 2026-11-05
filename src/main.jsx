@@ -29,11 +29,11 @@ function App(){
   <main>
    <section className="hero">
     <div className="hero-copy reveal">
-      <div className="hero-kicker"><span>01</span> NOVA — EDIÇÃO 2026</div>
-      <h1>IDEIAS QUE<br/><em>VIRAM</em><br/>PRODUTOS.</h1>
-      <p>Produtos digitais escolhidos para quem quer criar melhor, aprender na prática e transformar conhecimento em movimento.</p>
-      <div className="hero-buttons"><a href="#colecao" className="btn primary">EXPLORAR COLEÇÃO <ArrowRight size={16}/></a><a href="#manifesto" className="text-link">CONHEÇA A LOJA</a></div>
-      <div className="hero-meta"><span>CURADORIA</span><span>ACESSO DIGITAL</span><span>COMPRA SEGURA</span></div>
+      <div className="hero-kicker"><span>01</span> SITES PRONTOS — EDIÇÃO 2026</div>
+      <h1>SEU PRÓXIMO<br/><em>SITE</em><br/>COMEÇA AQUI.</h1>
+      <p>Sites profissionais, modernos e prontos para transformar sua presença online. Escolha um modelo, veja a demonstração e coloque seu projeto no ar.</p>
+      <div className="hero-buttons"><a href="#colecao" className="btn primary">VER SITES <ArrowRight size={16}/></a><a href="#manifesto" className="text-link">COMO FUNCIONA</a></div>
+      <div className="hero-meta"><span>DESIGN PROFISSIONAL</span><span>100% RESPONSIVO</span><span>ENTREGA RÁPIDA</span></div>
     </div>
     <div className="hero-visual reveal">
       <div className="hero-image-main"><img src={products[0].image} alt="Coleção digital"/></div>
@@ -43,41 +43,41 @@ function App(){
     </div>
    </section>
 
-   <section className="ticker"><span>NOVA</span><i>✦</i><span>CREATE</span><i>✦</i><span>LEARN</span><i>✦</i><span>EVOLVE</span><i>✦</i><span>NOVA</span></section>
+   <section className="ticker"><span>SITES</span><i>✦</i><span>DESIGN</span><i>✦</i><span>RESPONSIVO</span><i>✦</i><span>PERFORMANCE</span><i>✦</i><span>SITES</span></section>
 
    <section id="colecao" className="products">
-    <div className="section-title reveal"><div><span className="eyebrow">02 / COLEÇÃO</span><h2>FEITO PARA<br/><span>COMEÇAR.</span></h2></div><p>Uma seleção pequena e intencional. Cada produto existe para resolver um problema e colocar você em movimento.</p></div>
+    <div className="section-title reveal"><div><span className="eyebrow">02 / COLEÇÃO</span><h2>FEITO PARA<br/><span>VENDER.</span></h2></div><p>Modelos profissionais para negócios, portfólios, lojas, restaurantes e projetos digitais.</p></div>
     <div className="product-grid">{products.map((p,i)=><article className="product reveal show" key={p.id}>
       <div className="cover" style={{backgroundImage:`linear-gradient(180deg,rgba(10,7,12,.05),rgba(10,7,12,.92)),url('${p.image}')`}}><span className="product-index">0{i+1}</span><span className="product-tag">{p.tag}</span><span className="cover-label">DIGITAL / 0{i+1}</span></div>
-      <div className="product-info"><div className="product-category">PRODUTO DIGITAL</div><h3>{p.title}</h3><p>{p.desc}</p><div className="buy-row"><div><del>{money(p.old)}</del><strong>{money(p.price)}</strong></div><button className="btn small primary" onClick={()=>add(p)}>ADQUIRIR <ArrowRight size={14}/></button></div></div>
+      <div className="product-info"><div className="product-category">SITE PRONTO</div><h3>{p.title}</h3><p>{p.desc}</p><div className="buy-row"><div><del>{money(p.old)}</del><strong>{money(p.price)}</strong></div><button className="btn small primary" onClick={()=>add(p)}>ADQUIRIR <ArrowRight size={14}/></button></div></div>
     </article>)}</div>
    </section>
 
    <section id="manifesto" className="manifesto reveal">
     <div className="manifesto-index">03</div>
-    <div className="manifesto-copy"><span className="eyebrow">MANIFESTO</span><h2>MENOS<br/><em>RUÍDO.</em><br/>MAIS <span>CRIAÇÃO.</span></h2><p>A Loja Digital nasceu para tirar o excesso do caminho. Sem dezenas de opções, sem páginas confusas. Só produtos úteis, apresentados de forma simples e pensados para você começar.</p><a href="#beneficios" className="text-link">POR QUE COMPRAR AQUI →</a></div>
+    <div className="manifesto-copy"><span className="eyebrow">MANIFESTO</span><h2>MENOS<br/><em>COMPLICAÇÃO.</em><br/>MAIS <span>RESULTADO.</span></h2><p>A Steelmiind reúne sites prontos para quem quer começar com uma presença online profissional sem perder meses desenvolvendo do zero.</p><a href="#beneficios" className="text-link">POR QUE COMPRAR AQUI →</a></div>
     <div className="manifesto-photo"><img src={products[2].image} alt="Produto da coleção"/><span>03 / EDITION</span></div>
    </section>
 
    <section id="beneficios" className="experience reveal">
     <div className="experience-head"><span className="eyebrow">04 / EXPERIÊNCIA</span><h2>UMA COMPRA.<br/><span>SEM COMPLICAÇÃO.</span></h2></div>
     <div className="experience-grid">
-      <div><span>01</span><h3>ESCOLHA</h3><p>Encontre o produto que faz sentido para o seu momento.</p></div>
-      <div><span>02</span><h3>COMPRE</h3><p>Finalize em poucos passos, com uma experiência objetiva.</p></div>
-      <div><span>03</span><h3>COMECE</h3><p>Receba o acesso digital e coloque o conteúdo em prática.</p></div>
+      <div><span>01</span><h3>ESCOLHA</h3><p>Encontre o site que combina com o seu negócio.</p></div>
+      <div><span>02</span><h3>COMPRE</h3><p>Veja a demonstração, escolha o modelo e finalize a compra.</p></div>
+      <div><span>03</span><h3>RECEBA</h3><p>Receba o projeto e personalize conteúdo, cores e identidade.</p></div>
     </div>
    </section>
 
-   <section className="quote reveal"><span>“</span><p>O melhor produto não é o que parece mais complexo. É aquele que faz você sair do lugar.</p><small>NOVA / 2026</small></section>
+   <section className="quote reveal"><span>“</span><p>O melhor produto não é o que parece mais complexo. É aquele que faz você sair do lugar.</p><small>STEELMIIND / 2026</small></section>
 
-   <section className="big-cta reveal"><span className="eyebrow">05 / SEU PRÓXIMO PASSO</span><h2>PRONTO PARA<br/><em>COMEÇAR?</em></h2><p>Escolha sua próxima ferramenta.</p><a href="#colecao" className="btn primary">VER COLEÇÃO <ArrowRight/></a></section>
+   <section className="big-cta reveal"><span className="eyebrow">05 / SEU PRÓXIMO PASSO</span><h2>PRONTO PARA<br/><em>TER SEU SITE?</em></h2><p>Escolha seu modelo e dê o próximo passo.</p><a href="#colecao" className="btn primary">VER SITES <ArrowRight/></a></section>
 
    <section id="faq" className="faq reveal"><div className="faq-title"><span className="eyebrow">06 / FAQ</span><h2>DÚVIDAS<br/><span>COMUNS.</span></h2></div>
     <div className="faq-list">{["Como recebo meu produto?","O pagamento é seguro?","Posso trocar os produtos e preços?","O checkout já aceita pagamentos reais?"].map((q,i)=><details key={q}><summary>{q}<ChevronDown size={16}/></summary><p>{i===0?"Após a confirmação, a entrega pode ser feita por e-mail, link ou área de membros, conforme o produto.":i===1?"A página foi preparada para uma experiência segura. Para pagamentos reais, é necessário conectar um gateway.":i===2?"Sim. Produtos e preços ficam centralizados no projeto para facilitar futuras alterações.":"O checkout atual é demonstrativo. Para cobrar de verdade, conecte Mercado Pago, Stripe ou outro gateway."}</p></details>)}</div>
    </section>
   </main>
 
-  <footer><div className="footer-main"><a className="brand" href="#"><span className="brand-mark logo-nova"><span>N</span></span><span>NOV<span className="pink">A</span></span></a><p>Produtos digitais para quem prefere fazer.</p><div className="socials"><a href="#" aria-label="Instagram"><Instagram/></a><a href="#" aria-label="E-mail"><Mail/></a></div></div><div className="footer-bottom"><span>© 2026 NOVA</span><span>CURADORIA DIGITAL / BRASIL</span></div></footer>
+  <footer><div className="footer-main"><a className="brand" href="#"><span className="brand-mark logo-nova"><span>N</span></span><span>NOV<span className="pink">A</span></span></a><p>Sites profissionais para projetos que querem ser levados a sério.</p><div className="socials"><a href="#" aria-label="Instagram"><Instagram/></a><a href="#" aria-label="E-mail"><Mail/></a></div></div><div className="footer-bottom"><span>© 2026 STEELMIIND</span><span>CURADORIA DIGITAL / BRASIL</span></div></footer>
 
   {cartOpen&&<div className="overlay" onClick={e=>e.target===e.currentTarget&&setCartOpen(false)}><aside className="drawer"><div className="drawer-head"><h2>CARRINHO</h2><button onClick={()=>setCartOpen(false)}><X/></button></div>{cart.length?<>{cart.map((p,i)=><div className="cart-item" key={i}><div className="mini-cover" style={{backgroundImage:`url('${p.image}')`}}/><div><strong>{p.title}</strong><span>{money(p.price)}</span></div><button onClick={()=>remove(i)}>×</button></div>)}<div className="cart-total"><span>TOTAL</span><strong>{money(total)}</strong></div><button className="btn primary full" onClick={()=>{setCartOpen(false);setCheckout(true)}}>CONTINUAR <ArrowRight/></button></>:<div className="empty"><ShoppingBag size={36}/><h3>Seu carrinho está vazio.</h3><p>Escolha um produto da coleção.</p><button className="btn primary" onClick={()=>setCartOpen(false)}>VER COLEÇÃO</button></div>}</aside></div>}
 
