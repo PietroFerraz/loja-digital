@@ -21,7 +21,7 @@ function App(){
  return <div className="app">
   <div className="noise"/>
   <header className="header">
-   <a className="brand" href="#"><span className="brand-mark">LD</span><span>LOJA<span className="pink">DIGITAL</span></span></a>
+   <a className="brand" href="#"><span className="brand-mark logo-nova"><span>N</span></span><span>NOV<span className="pink">A</span></span></a>
    <nav className={menu?"nav-mobile":""}><a href="#colecao">Coleção</a><a href="#manifesto">Manifesto</a><a href="#beneficios">Experiência</a><a href="#faq">FAQ</a></nav>
    <div className="header-actions"><button className="icon-btn cart" aria-label="Abrir carrinho" onClick={()=>setCartOpen(true)}><ShoppingBag size={18}/>{cart.length>0&&<b>{cart.length}</b>}</button><button className="menu-btn" onClick={()=>setMenu(!menu)}>{menu?<X/>:<Menu/>}</button></div>
   </header>
@@ -29,7 +29,7 @@ function App(){
   <main>
    <section className="hero">
     <div className="hero-copy reveal">
-      <div className="hero-kicker"><span>01</span> LOJA DIGITAL — EDIÇÃO 2026</div>
+      <div className="hero-kicker"><span>01</span> NOVA — EDIÇÃO 2026</div>
       <h1>IDEIAS QUE<br/><em>VIRAM</em><br/>PRODUTOS.</h1>
       <p>Produtos digitais escolhidos para quem quer criar melhor, aprender na prática e transformar conhecimento em movimento.</p>
       <div className="hero-buttons"><a href="#colecao" className="btn primary">EXPLORAR COLEÇÃO <ArrowRight size={16}/></a><a href="#manifesto" className="text-link">CONHEÇA A LOJA</a></div>
@@ -43,7 +43,7 @@ function App(){
     </div>
    </section>
 
-   <section className="ticker"><span>LOJA DIGITAL</span><i>✦</i><span>CREATE</span><i>✦</i><span>LEARN</span><i>✦</i><span>EVOLVE</span><i>✦</i><span>LOJA DIGITAL</span></section>
+   <section className="ticker"><span>NOVA</span><i>✦</i><span>CREATE</span><i>✦</i><span>LEARN</span><i>✦</i><span>EVOLVE</span><i>✦</i><span>NOVA</span></section>
 
    <section id="colecao" className="products">
     <div className="section-title reveal"><div><span className="eyebrow">02 / COLEÇÃO</span><h2>FEITO PARA<br/><span>COMEÇAR.</span></h2></div><p>Uma seleção pequena e intencional. Cada produto existe para resolver um problema e colocar você em movimento.</p></div>
@@ -68,7 +68,7 @@ function App(){
     </div>
    </section>
 
-   <section className="quote reveal"><span>“</span><p>O melhor produto não é o que parece mais complexo. É aquele que faz você sair do lugar.</p><small>LOJA DIGITAL / 2026</small></section>
+   <section className="quote reveal"><span>“</span><p>O melhor produto não é o que parece mais complexo. É aquele que faz você sair do lugar.</p><small>NOVA / 2026</small></section>
 
    <section className="big-cta reveal"><span className="eyebrow">05 / SEU PRÓXIMO PASSO</span><h2>PRONTO PARA<br/><em>COMEÇAR?</em></h2><p>Escolha sua próxima ferramenta.</p><a href="#colecao" className="btn primary">VER COLEÇÃO <ArrowRight/></a></section>
 
@@ -77,7 +77,7 @@ function App(){
    </section>
   </main>
 
-  <footer><div className="footer-main"><a className="brand" href="#"><span className="brand-mark">LD</span><span>LOJA<span className="pink">DIGITAL</span></span></a><p>Produtos digitais para quem prefere fazer.</p><div className="socials"><a href="#" aria-label="Instagram"><Instagram/></a><a href="#" aria-label="E-mail"><Mail/></a></div></div><div className="footer-bottom"><span>© 2026 LOJA DIGITAL</span><span>CURADORIA DIGITAL / BRASIL</span></div></footer>
+  <footer><div className="footer-main"><a className="brand" href="#"><span className="brand-mark logo-nova"><span>N</span></span><span>NOV<span className="pink">A</span></span></a><p>Produtos digitais para quem prefere fazer.</p><div className="socials"><a href="#" aria-label="Instagram"><Instagram/></a><a href="#" aria-label="E-mail"><Mail/></a></div></div><div className="footer-bottom"><span>© 2026 NOVA</span><span>CURADORIA DIGITAL / BRASIL</span></div></footer>
 
   {cartOpen&&<div className="overlay" onClick={e=>e.target===e.currentTarget&&setCartOpen(false)}><aside className="drawer"><div className="drawer-head"><h2>CARRINHO</h2><button onClick={()=>setCartOpen(false)}><X/></button></div>{cart.length?<>{cart.map((p,i)=><div className="cart-item" key={i}><div className="mini-cover" style={{backgroundImage:`url('${p.image}')`}}/><div><strong>{p.title}</strong><span>{money(p.price)}</span></div><button onClick={()=>remove(i)}>×</button></div>)}<div className="cart-total"><span>TOTAL</span><strong>{money(total)}</strong></div><button className="btn primary full" onClick={()=>{setCartOpen(false);setCheckout(true)}}>CONTINUAR <ArrowRight/></button></>:<div className="empty"><ShoppingBag size={36}/><h3>Seu carrinho está vazio.</h3><p>Escolha um produto da coleção.</p><button className="btn primary" onClick={()=>setCartOpen(false)}>VER COLEÇÃO</button></div>}</aside></div>}
 
